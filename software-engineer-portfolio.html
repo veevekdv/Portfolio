@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veevek Dave - Software Engineer</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+  <style>
+    :root {
+      --primary: #00f5d4;
+      --primary-dark: #00bbf9;
+      --secondary: #9d4edd;
+      --dark: #0f172a; 
+      --light: #1e293b;
+      --border: #334155;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: var(--dark);
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    .header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #0f172a;
+      padding: 3rem 0 2rem;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .header-subtitle {
+      font-size: 1.3rem;
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+    }
+    .contact-links a {
+      color: #0f172a;
+      font-weight: 500;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: all 0.3s;
+    }
+    .contact-links a:hover {
+      color: #fff;
+      text-shadow: 0 0 8px var(--primary-dark);
+    }
+
+    /* Sections */
+    .content-section {
+      padding: 4rem 0;
+      min-height: 400px;
+    }
+    .content-section:nth-child(even) {
+      background: var(--light);
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: var(--primary);
+      text-shadow: 0 0 6px rgba(0, 245, 212, 0.6);
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--secondary);
+      box-shadow: 0 0 6px var(--secondary);
+    }
+    .timeline-item {
+      position: relative;
+      padding-bottom: 2rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.4rem;
+      top: 0.5rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 8px var(--primary);
+    }
+    .timeline-date {
+      color: var(--primary-dark);
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .timeline-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      color: #fff;
+    }
+    .timeline-company {
+      color: var(--secondary);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .skill-category h6 {
+      color: var(--secondary);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+    .skill-tag {
+      display: inline-block;
+      background: transparent;
+      color: #e2e8f0;
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin: 0.25rem;
+      border: 1px solid var(--primary);
+      transition: all 0.3s;
+    }
+    .skill-tag:hover {
+      background: var(--primary);
+      color: #0f172a;
+      box-shadow: 0 0 8px var(--primary);
+    }
+
+    @media (max-width: 576px) {
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="container">
+      <h1>Veevek Dave</h1>
+      <p class="header-subtitle">Junior Software Engineer</p>
+      <div class="contact-links">
+        <a href="mailto:veevekd401@email.com"><i class="bi bi-envelope-fill me-1"></i>Email</a>
+        <a href="" target="_blank"></i>New York, NY</a>
+        <a href="https://linkedin.com/in/veevekdave" target="_blank"><i class="bi bi-linkedin me-1"></i>LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about" class="content-section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content mb-4">
+        <p>
+            I am interested in applying my skillset and expanding my knowledge in the software engineering field.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h6>Languages</h6>
+          <div>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">C++</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h6>Backend & Databases</h6>
+          <div>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Kafka</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h6>Tools</h6>
+          <div>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Jenkins</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">CI/CD</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career -->
+  <section id="career" class="content-section">
+    <div class="container">
+      <h2 class="section-title">Career Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2025 - Present</div>
+          <div class="timeline-title">Software Engineer</div>
+          <div class="timeline-company">Mastercard, New York</div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-title">Software Engineer Intern</div>
+            <div class="timeline-company">Mastercard, New York</div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">2023</div>
+            <div class="timeline-title">Software Engineer Intern</div>
+            <div class="timeline-company">Mastercard, St. Louis</div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">2022</div>
+            <div class="timeline-title">Technology Intern</div>
+            <div class="timeline-company">AT&T, Bedminster</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2021-25</div>
+          <div class="timeline-title">B.S. Computer Science, Information Technology & Web Science</div>
+          <div class="timeline-company">Rensselaer Polytechnic Institute</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
